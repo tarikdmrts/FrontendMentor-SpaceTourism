@@ -7,24 +7,36 @@
   color: white;
 }
 
-html, body {
+html,
+body {
   width: 100%;
-  min-height: 200vh;
+  min-height: 100vh;
+  overflow-y: auto;
   overflow-x: hidden;
   font-family: sans-serif;
 }
-
-img, picture, video, canvas, svg {
+body {
+  background: black;
+}
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -33,7 +45,9 @@ a {
   color: inherit;
 }
 
-.container, .flex, .grid {
+.container,
+.flex,
+.grid {
   max-width: 100%;
   overflow-x: hidden;
 }

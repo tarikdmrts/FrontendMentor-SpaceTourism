@@ -1,0 +1,95 @@
+.crew-bg {
+  background-image: url("../../assets/crew/background-crew-mobile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.crew-page {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 2rem;
+}
+.crew-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.4s ease-in-out forwards;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  margin-top: 2rem;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.crew-image,
+.crew-details {
+  width: auto;
+}
+.crew-role {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0px;
+  letter-spacing: 2.7px;
+  opacity: 0.5;
+}
+.crew-name {
+  font-family: "Bellefair", serif;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 8px 0px;
+  letter-spacing: 1.5px;
+  color: white;
+}
+.crew-bio {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: #d0d6f9;
+  margin: 3rem;
+}
+.crew-list {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  gap: 1rem;
+  flex-direction: row;
+  font-size: 1.5rem;
+}
+.crew-dot {
+  color: white;
+  opacity: 0.17;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.crew-list-item:not(.active):hover .crew-dot {
+  opacity: 0.5;
+}
+
+.crew-list-item.active .crew-dot {
+  opacity: 1;
+}
+
+.crew-image {
+  margin-top: 1rem;
+  width: 50%;
+  height: 50%;
+}
