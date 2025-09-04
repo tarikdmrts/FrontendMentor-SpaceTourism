@@ -16,26 +16,32 @@
   background-size: cover;
   z-index: -1;
 }
-
-.home-content {
+.content {
   position: relative;
   z-index: 1;
   display: flex;
   align-items: center;
   flex-direction: column;
-  min-height: 200vh;
+  min-height: 100vh;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 .home-header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin:24px;
+  margin: 24px;
 }
 
 .home-big-header {
-  font-family: 'Bellefair', serif;
+  font-family: "Bellefair", serif;
   font-weight: 400;
   font-size: 6rem;
   text-transform: uppercase;
@@ -46,16 +52,16 @@
 
 .home-small-header {
   color: #d0d6f9;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 2rem;  
-  letter-spacing: 4px;     
+  line-height: 2rem;
+  letter-spacing: 4px;
 }
 
 .home-text {
   color: #d0d6f9;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-weight: 400;
   font-size: 18px;
   text-align: center;
@@ -64,8 +70,7 @@
 .explore-btn {
   border-radius: 50%;
   background: white;
-  color:#0B0D17;
-  font-family: 'Bellefair', serif;
+  font-family: "Bellefair", serif;
   font-size: 20px;
   text-transform: uppercase;
   width: 150px;
@@ -77,20 +82,25 @@
   align-items: center;
   justify-content: center;
 }
-
+.explore-btn span {
+  color: #0b0d17;
+}
+.explore-btn:hover span {
+  opacity: 50%;
+}
 .explore-btn::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 350px;
   height: 350px;
   background-color: white;
   border-radius: 50%;
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.3s ease;
   z-index: -1;
   pointer-events: none;
 }
 
 .explore-btn:hover::after {
-  opacity: 0.1; 
+  opacity: 0.1;
 }

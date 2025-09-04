@@ -4,6 +4,7 @@
   padding: 24px 0px;
   align-items: center;
   width: 100%;
+  margin-bottom: 24px;
 }
 
 .menu-toggle {
@@ -22,14 +23,14 @@
 .navbar-overlay {
   position: fixed;
   top: 0;
-  right: -295px;
-  width: 295px;
+  right: -70%;
+  width: 70%;
   height: 100vh;
   backdrop-filter: blur(20px);
   color: white;
   transition: right 1s ease;
   z-index: 1000;
-  padding: 2rem;
+  padding: 1.75rem;
 }
 
 .navbar-overlay.open {
@@ -38,36 +39,64 @@
 
 .navbar-overlay ul {
   list-style: none;
-  padding: 2rem 0rem;
+  padding: 3rem 0.5rem;
 }
 .navbar-overlay li {
   margin: 2rem 0;
   cursor: pointer;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 2px;
+  position: relative;
+}
+
+.navbar-links li::after {
+  content: "";
+  display: block;
+  opacity: 0;
+  height: 1.35rem;
+  width: 0.25rem;
+  position: absolute;
+  background: white;
+  transition: opacity 0.5s;
+  z-index: -1;
+  right: -2.25rem;
+  top: 0px;
+}
+.navbar-links li:hover::after {
+  opacity: 0.5;
 }
 
 .navbar-close {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 3rem;
-    color: #d0d6f9;
-    padding: 16px 0px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 3rem;
+  color: #d0d6f9;
 }
 
-.navbar-close-btn{
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #d0d6f9;
+.navbar-close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #d0d6f9;
 }
 
-.overlay-list-number{
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 2.7px;
-    margin-right: 16px;
+.overlay-list-number {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 2.7px;
+  margin-right: 16px;
+}
+
+.navbar-links a.active-link::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0.25rem;
+  height: 1.35rem;
+  right: -2.25rem;
+  top: 0px;
+  background-color: white;
 }

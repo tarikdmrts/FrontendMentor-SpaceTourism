@@ -1,6 +1,7 @@
 import logo from "../../assets/shared/logo.svg";
 import "./navigation.css";
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -8,9 +9,9 @@ export default function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <a href="#home">
+        <NavLink to="/">
           <img src={logo} alt="Space Tourism Logo" />
-        </a>
+        </NavLink>
       </div>
       <button
         className="menu-toggle"
@@ -31,24 +32,36 @@ export default function NavBar() {
         </div>
         <ul className="navbar-links">
           <li>
-            <a href="#home">
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               <span className="overlay-list-number">00</span>HOME
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#destinations">
+            <NavLink
+              to="/destinations"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               <span className="overlay-list-number">01</span>DESTINATIONS
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#crew">
+            <NavLink
+              to="/crew"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               <span className="overlay-list-number">02</span>CREW
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="#technology">
+            <NavLink
+              to="/technology"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               <span className="overlay-list-number">03</span>TECHNOLOGY
-            </a>
+            </NavLink>
           </li>
         </ul>
       </div>

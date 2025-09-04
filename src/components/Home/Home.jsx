@@ -1,12 +1,15 @@
 import "./home.css";
 import NavBar from "../Navigation/Navigation.jsx";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="home">
       <div className="home-bg"></div>
-      <div className="home-content">
-        <NavBar />
+      <NavBar />
+      <div className="content">
         <div className="home-header">
           <h2 className="home-small-header">SO, YOU WANT TO TRAVEL TO</h2>
           <h1 className="home-big-header">SPACE</h1>
@@ -17,7 +20,9 @@ function Home() {
             world experience!
           </p>
         </div>
-          <div className="explore-btn">EXPLORE</div>
+        <div className="explore-btn" onClick={() => navigate("/destinations")}>
+          <span>EXPLORE</span>
+        </div>
       </div>
     </div>
   );

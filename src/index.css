@@ -9,7 +9,7 @@
 
 html, body {
   width: 100%;
-  min-height: 100%;
+  min-height: 200vh;
   overflow-x: hidden;
   font-family: sans-serif;
 }
