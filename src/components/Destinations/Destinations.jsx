@@ -12,7 +12,7 @@ export default function Destinations() {
     <div className="destinations-page">
       <div className="destinations-bg"></div>
       <NavBar />
-      <div className="content">
+      <div className="destination-content">
         <h2 className="header">
           <span className="header-number">01</span> PICK YOUR DESTINATION
         </h2>

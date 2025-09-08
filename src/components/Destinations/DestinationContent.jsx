@@ -13,7 +13,7 @@ export function DestinationContent({
   setActiveIndex,
 }) {
   return (
-    <div className="destination-info fade-in">
+    <div className="destination-info">
       <div className="destination-image">
         <img
           src={

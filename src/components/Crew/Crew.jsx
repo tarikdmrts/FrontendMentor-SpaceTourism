@@ -12,7 +12,7 @@ export default function Crew() {
     <div className="crew-page">
       <div className="crew-bg"></div>
       <NavBar />
-      <div className="content">
+      <div className="crew-content">
         <h2 className="header">
           <span className="header-number">02</span> MEET YOUR CREW
         </h2>

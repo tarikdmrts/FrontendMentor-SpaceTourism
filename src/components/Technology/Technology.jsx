@@ -13,7 +13,7 @@ export default function Technology() {
     <div className="technology-page">
       <div className="technology-bg"></div>
       <NavBar />
-      <div className="content">
+      <div className="tech-content">
         <h2 className="header">
           <span className="header-number">03</span> SPACE LAUNCH 101
         </h2>

@@ -8,6 +8,7 @@
 }
 
 .menu-toggle {
+  display: block;
   font-size: 3rem;
   background: none;
   border: none;
@@ -19,7 +20,9 @@
 .navbar-logo {
   padding-left: 24px;
 }
-
+.navbar-logo img {
+  width: 40px;
+}
 .navbar-overlay {
   position: fixed;
   top: 0;
@@ -91,7 +94,7 @@
 }
 
 .navbar-links a.active-link::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   width: 0.25rem;
@@ -99,4 +102,91 @@
   right: -2.25rem;
   top: 0px;
   background-color: white;
+}
+@media (min-width: 768px) {
+  .navbar {
+    padding: 0;
+  }
+  .navbar-logo img {
+    width: 48px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar-overlay {
+    display: flex;
+    position: static;
+    height: auto;
+    padding: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: #1b1d26;
+    color: white;
+    width: 80%;
+  }
+  .navbar-logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar-overlay ul {
+    padding: 0;
+  }
+  .navbar-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .navbar-close,
+  .navbar-close-btn {
+    display: none;
+  }
+
+  .navbar-links a.active-link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    right: 0px;
+    top: 3rem;
+    background-color: white;
+  }
+
+  .navbar-links li::after {
+    content: "";
+    display: block;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 5px;
+    right: 0px;
+    top: 3rem;
+    background-color: white;
+    transition: opacity 0.5s;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-overlay {
+    width: 60%;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .navbar-overlay::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -40%;
+    width: 50%;
+    height: 1px;
+    opacity: 0.1;
+    background-color: white;
+  }
+  .navbar {
+    padding: 24px 0px;
+  }
 }

@@ -14,6 +14,20 @@
   overflow-x: hidden;
   padding-bottom: 2rem;
 }
+.crew-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
 .crew-info {
   display: flex;
   flex-direction: column;
@@ -63,7 +77,11 @@
   font-size: 16px;
   line-height: 28px;
   color: #d0d6f9;
-  margin: 3rem;
+  margin: 3rem 1rem;
+  text-align: center;
+}
+.crew-dot {
+  font-size: 1.25rem;
 }
 .crew-list {
   display: flex;
@@ -92,4 +110,83 @@
   margin-top: 1rem;
   width: 50%;
   height: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.crew-image::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 15, 28, 0) 0%,
+    rgb(14, 15, 28) 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .crew-bg {
+    background-image: url("../../assets/crew/background-crew-tablet.jpg");
+  }
+  .crew-role {
+    font-size: 24px;
+  }
+  .crew-name {
+    font-size: 40px;
+    margin-top: 1rem;
+  }
+  .crew-bio {
+    margin: 2rem 6rem;
+  }
+  .crew-page {
+    padding-bottom: 0rem;
+  }
+}
+
+@media (min-width:1024px){
+  .crew-bg {
+    background-image: url("../../assets/crew/background-crew-desktop.jpg");
+  }
+  .crew-info{
+    flex-direction: row;
+    text-align: left;
+    width: 80%;
+    margin-left: 4rem;
+  }
+  .crew-bio{
+    text-align: left;
+    margin: 0;
+  }
+  .crew-details{
+    width: 50%;
+    margin-top: 6rem;
+  }
+  .crew-role{
+    font-size: 32px;
+  }
+  .crew-name{
+    font-size: 56px;
+  }
+  .crew-bio{
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 2rem;
+  }
+  .crew-list{
+    margin: 12rem 20rem 2rem 0rem;
+    gap: 2rem;
+    z-index: 2;
+    position: relative;
+  }
+  .crew-list span{
+    font-size: 2rem;
+  }
+
+  .crew-image{
+    margin-left: 6rem;
+  }
 }

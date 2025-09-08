@@ -101,3 +101,53 @@
 .explore-btn:hover::after {
   opacity: 0.1;
 }
+
+@media (min-width: 768px) {
+  .home-bg {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+  html {
+    font-size: 18px;
+  }
+  .home-small-header {
+    font-size: 28px;
+  }
+  .home-big-header {
+    font-size: 8rem;
+  }
+  .explore-btn {
+    width: 250px;
+    height: 250px;
+    font-size: 32px;
+  }
+  .explore-btn:hover::after {
+    width: 600px;
+    height: 600px;
+  }
+  .home-header {
+    margin-top: 104px;
+  }
+}
+
+@media (min-width:1024px){
+  .home-bg{
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+  }
+  .content{
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 75vh;
+  }
+  .home-header{
+    align-items: flex-start;
+  }
+  .home-text{
+    width: 540px;
+    text-align: left;
+  }
+  .explore-btn{
+    width: 275px;
+    height: 275px;
+  }
+}

@@ -14,6 +14,28 @@
   overflow-x: hidden;
   padding-bottom: 2rem;
 }
+.tech-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.tech-dynamic,
+.technology-image img {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .tech-terminology {
   font-family: "Bellefair", serif;
   font-weight: 400;
@@ -105,5 +127,88 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .technology-bg {
+    background-image: url("../../assets/technology/background-technology-tablet.jpg");
+  }
+  .tech-terminology {
+    font-size: 24px;
+  }
+  .tech-name {
+    font-size: 40px;
+  }
+  .tech-description {
+    font-size: 16px;
+    padding: 0rem 4rem;
+  }
+  .tech-button {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .technology-bg {
+    background-image: url("../../assets/technology/background-technology-desktop.jpg");
+  }
+  .technology-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .technology-info {
+    align-items: flex-start;
+    padding: 0rem 2rem 0rem 4rem;
+  }
+  .tech-dynamic {
+    align-items: flex-start;
+  }
+  .technology-buttons {
+    margin-left: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .technology-buttons ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .tech-button {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+  .technology-image {
+    order: 1;
+  }
+  .technology-image picture {
+    width: 600px;
+  }
+  .technology-image img {
+    width: 600px;
+  }
+  .tech-terminology {
+    font-size: 32px;
+  }
+  .tech-name {
+    font-size: 56px;
+  }
+  .tech-description {
+    font-size: 18px;
+    text-align: left;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1920px) {
+  .technology-image picture {
+    width: 900px;
+  }
+  .technology-image img {
+    width: 900px;
   }
 }

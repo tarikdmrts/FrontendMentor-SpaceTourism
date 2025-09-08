@@ -44,7 +44,7 @@ export default function NavBar() {
               to="/destinations"
               className={({ isActive }) => (isActive ? "active-link" : "")}
             >
-              <span className="overlay-list-number">01</span>DESTINATIONS
+              <span className="overlay-list-number">01</span>DESTINATION
             </NavLink>
           </li>
           <li>
