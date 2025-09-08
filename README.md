@@ -1,12 +1,39 @@
-# React + Vite
+# Frontend Mentor - Space tourism website solution
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Space tourism website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3).
 
-Currently, two official plugins are available:
+### The challenge
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Users should be able to:
 
-## Expanding the ESLint configuration
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Screenshot
+
+![Desktop Design](./screenshots/Desktop-Design.png)
+![Inner Page Design](./screenshots/Inner-Page-Destination.png)
+
+### Links
+
+- Solution URL:(https://www.frontendmentor.io/solutions/space-tourism-with-react-woqa6RCSuB)
+- Live Site URL: (https://frontend-mentor-space-tourism-three.vercel.app/)
+
+### Built with
+
+- CSS
+- Flexbox
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+
+### What I learned
+
+- **React State and Props Management:** Learned how to manage dynamic content using state and pass data between components with props.  
+- **Conditional Rendering and Keys:** Understood how React re-renders components and the importance of keys for preventing unnecessary DOM updates.  
+- **Flexbox and Responsive Design:** Gained experience in building layouts that adapt to mobile, tablet, and desktop screens.  
+- **CSS Animations and Transitions:** Implemented fade-in effects and hover animations for smooth UI interactions.  
+
+## Author
+
+- Frontend Mentor - [@tarikdmrts](https://www.frontendmentor.io/profile/tarikdmrts)
